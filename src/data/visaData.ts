@@ -53,63 +53,133 @@ export const SERVICES_DATA: Record<'fast-track' | 'trc' | 'work-permit', Service
   'trc': {
     id: 'trc',
     title: 'THẺ TẠM TRÚ (TRC)',
-    tagline: 'Giấy chứng nhận lưu trú hợp pháp từ 1 đến 5 năm tại Việt Nam miễn thị thực',
+    tagline: 'Hồ sơ thủ tục thẻ tạm trú diện Lao động & Thăm thân chuẩn quy định xuất nhập cảnh',
     badge: 'Lưu trú 1 - 5 Năm',
     badgeColor: 'bg-[#0048af] text-white',
     heroImage: TRC_IMAGE,
-    summary: 'Thẻ tạm trú (Temporary Residence Card - TRC) do Cục Quản lý xuất nhập cảnh hoặc Phòng Quản lý xuất nhập cảnh công an tỉnh, thành phố cấp cho người nước ngoài được phép cư trú có thời hạn tại Việt Nam và có giá trị thay thị thực (visa).',
+    summary: 'Thẻ tạm trú (Temporary Residence Card - TRC) do Cục Quản lý xuất nhập cảnh cấp cho người nước ngoài cư trú dài hạn tại Việt Nam thay thị thực. Visa5S hỗ trợ trọn gói chuẩn bị hồ sơ cho cả diện Lao động và diện Thăm thân, hướng dẫn nộp hồ sơ qua hệ thống định danh VNeID mức 2.',
     keyBenefits: [
-      'Lưu trú dài hạn hợp pháp tại Việt Nam từ 1 đến 5 năm mà không cần gia hạn visa nhiều lần.',
-      'Tự do xuất cảnh, nhập cảnh nhiều lần trong thời hạn của thẻ mà không mất phí dán tem visa.',
-      'Được bảo lãnh vợ/chồng, con dưới 18 tuổi cùng sang Việt Nam sinh sống (thẻ TT).',
-      'Thuận tiện mở tài khoản ngân hàng, mua căn hộ, đăng ký giấy phép lái xe tại Việt Nam.',
-      'Hỗ trợ xử lý trọn gói từ khâu soạn thảo biểu mẫu NA6, NA8 đến bàn giao thẻ.'
+      'Lưu trú dài hạn từ 1 đến 5 năm tại Việt Nam hoàn toàn miễn thị thực xuất nhập cảnh.',
+      'Được bảo lãnh người thân (vợ/chồng, con cái) cùng sang Việt Nam sinh sống.',
+      'Thuận tiện mở tài khoản ngân hàng, mua căn hộ, chuyển đổi bằng lái xe.',
+      'Hồ sơ công ty hoặc hồ sơ thăm thân được chuyên viên Visa5S soạn thảo chuẩn chỉnh.',
+      'Đồng hành hỗ trợ nộp hồ sơ cùng nhân sự/người bảo lãnh và nhận kết quả tận tay.'
     ],
     eligibility: [
-      'Người lao động nước ngoài có Giấy phép lao động hoặc Giấy miễn GPLĐ còn hạn từ 1 năm trở lên (ký hiệu LĐ1, LĐ2).',
-      'Nhà đầu tư nước ngoài góp vốn vào doanh nghiệp tại Việt Nam (ký hiệu ĐT1, ĐT2, ĐT3).',
-      'Luật sư nước ngoài được Bộ Tư pháp cấp giấy phép hành nghề (ký hiệu LS).',
-      'Vợ, chồng, con dưới 18 tuổi của người nước ngoài được cấp thẻ tạm trú (ký hiệu TT).'
+      'Người lao động nước ngoài có Giấy phép lao động hoặc Giấy miễn GPLĐ (diện Lao động LĐ1, LĐ2).',
+      'Người nước ngoài kết hôn với công dân Việt Nam hoặc là con của công dân Việt Nam (diện Thăm thân TT).',
+      'Nhà đầu tư nước ngoài góp vốn vào doanh nghiệp tại Việt Nam (ký hiệu ĐT1, ĐT2, ĐT3).'
     ],
     requiredDocs: [
-      'Hộ chiếu gốc còn thời hạn dài hơn thời hạn thẻ tạm trú dự kiến ít nhất 30 ngày.',
-      'Giấy phép lao động bản gốc hoặc Giấy xác nhận không thuộc diện cấp GPLĐ.',
-      'Giấy chứng nhận đăng ký kinh doanh/Đầu tư của doanh nghiệp bảo lãnh (công chứng).',
-      'Giấy xác nhận đăng ký tạm trú tại công an phường/xã hoặc khai báo online.',
-      '02 ảnh 2x3cm nền trắng, chụp không quá 6 tháng.'
+      'Hộ chiếu gốc còn hạn dài hơn thời hạn thẻ dự kiến ít nhất 30 ngày.',
+      '2 Ảnh thẻ 2x3 mới nhất + file ảnh (nền trắng).',
+      'Visa / Thẻ tạm trú (TRC) bản gốc đang sử dụng.',
+      'Giấy phép kinh doanh và Giấy phép lao động (sao y công chứng 2 bản - đối với diện lao động).',
+      'Giấy kết hôn sao y công chứng và hợp pháp hóa lãnh sự (đối với diện thăm thân).',
+      'Tờ khai tạm trú / Xác nhận cư trú CT07 của người bảo lãnh.',
+      'CCCD của nhân sự hoặc người bảo lãnh Việt Nam.',
+      'Bộ hồ sơ công ty ký đóng dấu (do chuyên viên Visa5S soạn).'
     ],
-    processingTime: '5 - 7 ngày làm việc kể từ ngày nộp đủ hồ sơ hợp lệ',
-    validity: 'Từ 01 năm đến tối đa 05 năm (tùy theo diện đầu tư hoặc lao động)'
+    docGroups: [
+      {
+        categoryTitle: 'Thủ tục xin cấp thẻ tạm trú diện Lao động',
+        badge: 'Diện Lao Động',
+        docs: [
+          'Hộ chiếu gốc',
+          '2 Ảnh thẻ 2x3 mới nhất + file ảnh',
+          'Visa / TRC gốc',
+          'Giấy phép kinh doanh công ty Việt Nam (sao y công chứng 2 bản)',
+          'Giấy phép lao động (sao y công chứng 2 bản)',
+          'Giấy xác nhận tạm trú online nếu cùng tỉnh',
+          'SĐT, Email của nhân sự (có đóng BHXH để nộp hồ sơ cùng bên em và nhận kết quả)',
+          'CCCD 2 mặt + sao y công chứng 2 mặt trên 1 mặt tờ A4',
+          'Hồ sơ công ty ký đóng dấu (Bên em soạn)'
+        ],
+        specialRequirements: [
+          'Cần định danh mức 2 VNeID của công ty và Token (chữ ký số điện tử).'
+        ],
+        processingTimeNote: 'Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tuỳ hồ sơ.'
+      },
+      {
+        categoryTitle: 'Thủ tục xin cấp thẻ tạm trú diện Thăm thân (Family visit)',
+        badge: 'Diện Thăm Thân',
+        docs: [
+          'Hộ chiếu gốc',
+          'Ảnh thẻ 2x3 nền trắng + file ảnh gửi qua Zalo',
+          'Visa / Thẻ tạm trú - Bản gốc',
+          'Giấy kết hôn (sao y công chứng và hợp pháp hóa lãnh sự nếu được cấp ngoài Việt Nam)',
+          'CT07 xác nhận cư trú của người bảo lãnh - Bản gốc',
+          'Tờ khai tạm trú - Bản gốc có xác nhận dấu đỏ nếu ở khác tỉnh (nếu cùng tỉnh với vợ thì tờ khai tạm trú online là được)'
+        ],
+        photoInfo: [
+          'Mặt hộ chiếu của người nước ngoài (NNN), visa/thẻ tạm trú đang dùng, dấu nhập cảnh gần nhất',
+          '2 mặt CCCD của người Việt Nam',
+          'Địa chỉ thường trú (theo hộ khẩu) của người Việt Nam (sau sáp nhập)'
+        ],
+        specialRequirements: [
+          'Cần định danh mức 2 VNeID của người bảo lãnh.',
+          'Tùy từng trường hợp thực tế sẽ có các thủ tục hồ sơ điều chỉnh tương ứng.'
+        ],
+        processingTimeNote: 'Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tuỳ hồ sơ.'
+      }
+    ],
+    processingTime: '8 - 12 ngày làm việc (không tính thứ 7, chủ nhật)',
+    validity: 'Từ 01 năm đến tối đa 05 năm (theo quy định pháp luật)'
   },
   'work-permit': {
     id: 'work-permit',
     title: 'GIẤY PHÉP LAO ĐỘNG (WORK PERMIT)',
-    tagline: 'Chứng nhận pháp lý bắt buộc để người nước ngoài làm việc hợp pháp tại Việt Nam',
+    tagline: 'Thông tin hồ sơ cần chuẩn bị cấp Giấy phép lao động theo tiêu chuẩn từng chức danh',
     badge: 'Hợp chuẩn lao động',
     badgeColor: 'bg-[#005952] text-white',
     heroImage: WORK_PERMIT_IMAGE,
-    summary: 'Giấy phép lao động là văn bản pháp lý do Sở Lao động - Thương binh và Xã hội (hoặc Ban Quản lý các KCN/KKT) cấp, cho phép người lao động nước ngoài làm việc hợp pháp tại các tổ chức, doanh nghiệp hoạt động trên lãnh thổ Việt Nam.',
+    summary: 'Giấy phép lao động là văn bản pháp lý bắt buộc cho người lao động nước ngoài làm việc hợp pháp tại Việt Nam. Visa5S hỗ trợ trọn gói từ soạn thảo hồ sơ, hướng dẫn khám sức khỏe, làm lý lịch tư pháp số 1 đến hợp pháp hóa lãnh sự 2 đầu văn bằng và chứng nhận kinh nghiệm.',
     keyBenefits: [
-      'Đảm bảo doanh nghiệp và người lao động tuân thủ 100% quy định Bộ luật Lao động.',
-      'Là điều kiện tiên quyết để xin cấp Thẻ tạm trú (TRC) thời hạn 2 năm.',
-      'Tránh rủi ro bị xử phạt vi phạm hành chính nặng hoặc bị trục xuất khỏi Việt Nam.',
-      'Hỗ trợ trọn gói: Báo cáo giải trình nhu cầu sử dụng lao động nước ngoài và nộp hồ sơ xin cấp phép.',
-      'Dịch thuật công chứng và hỗ trợ làm lý lịch tư pháp, giấy khám sức khỏe nhanh.'
+      'Doanh nghiệp và người lao động tuân thủ 100% quy định pháp luật lao động hiện hành.',
+      'Là căn cứ pháp lý quan trọng nhất để làm thủ tục xin cấp Thẻ tạm trú 2 năm.',
+      'Visa5S trực tiếp soạn thảo toàn bộ hồ sơ công ty ký đóng dấu.',
+      'Hỗ trợ hợp pháp hóa lãnh sự 2 đầu bằng đại học và xác nhận kinh nghiệm làm việc.',
+      'Đại diện doanh nghiệp nộp và theo dõi lộ trình xét duyệt tại cơ quan chức năng.'
     ],
     eligibility: [
-      'Vị trí Chuyên gia: Có bằng đại học trở lên và có ít nhất 3 năm kinh nghiệm làm việc phù hợp.',
-      'Vị trí Lao động kỹ thuật: Được đào tạo chuyên ngành ít nhất 1 năm và có 3 năm kinh nghiệm.',
-      'Vị trí Nhà quản lý / Giám đốc điều hành: Bổ nhiệm theo điều lệ công ty hoặc giấy phép thành lập.',
-      'Trường hợp đặc biệt: Miễn giấy phép lao động cho chủ sở hữu/thành viên góp vốn công ty TNHH.'
+      'Chức danh Chuyên gia: Bằng Đại Học + trên 4 năm kinh nghiệm (> 4 năm) ở cùng lĩnh vực và chức danh cần xin.',
+      'Chức danh Phó Giám Đốc: Không cần bằng cấp, kinh nghiệm nhưng vị trí đó phải trống trên Giấy phép kinh doanh.',
+      'Chức danh Lao động kỹ thuật: Được đào tạo chuyên ngành ít nhất 1 năm và có tối thiểu 3 năm kinh nghiệm phù hợp.'
     ],
     requiredDocs: [
-      'Văn bản chấp thuận nhu cầu sử dụng lao động nước ngoài của UBND tỉnh/thành phố.',
-      'Bằng đại học và văn bản xác nhận kinh nghiệm làm việc nước ngoài (hợp pháp hóa lãnh sự).',
-      'Phiếu lý lịch tư pháp Việt Nam hoặc nước ngoài (cấp không quá 6 tháng).',
-      'Giấy chứng nhận sức khỏe khám tại bệnh viện đủ điều kiện theo quy định của Bộ Y tế.',
-      'Hộ chiếu bản sao chứng thực và 02 ảnh màu 4x6cm.'
+      'Hộ Chiếu (Passport).',
+      'Visa / Thẻ tạm trú (Visa / Temporary Residence Card).',
+      'Giấy phép kinh doanh sao y công chứng (Notarized copy business license).',
+      'Giấy phép lao động cũ nếu có (Old work permit if applicable).',
+      '2 Ảnh thẻ 4*6 + file (2 4*6 card photos + file).',
+      'Giấy khám sức khỏe (Health certificate).',
+      'Lý lịch tư pháp số 1 (hợp pháp hóa lãnh sự) (Judicial record No. 1 - consular legalization).',
+      'Bằng Đại học và xác nhận kinh nghiệm làm việc liên quan đến công việc cho chuyên gia (hợp pháp hóa lãnh sự 2 đầu).',
+      'Hồ sơ công ty kí đóng dấu (Bên em soạn - Prepared by Visa5S).'
     ],
-    processingTime: '15 - 20 ngày làm việc (bao gồm bước giải trình nhu cầu lao động)',
+    docGroups: [
+      {
+        categoryTitle: 'Hồ sơ Giấy Phép lao động cần chuẩn bị (Work Permit Application)',
+        badge: 'Danh mục hồ sơ',
+        docs: [
+          'Hộ Chiếu (Passport)',
+          'Visa / Thẻ tạm trú (Visa / Temporary Residence Card)',
+          'Giấy phép kinh doanh sao y công chứng (Notarized copy business license)',
+          'Giấy phép lao động cũ nếu có (Old work permit if applicable)',
+          '2 Ảnh thẻ 4*6 + file (2 4*6 card photos + file)',
+          'Giấy khám sức khỏe (Health certificate)',
+          'Lý lịch tư pháp số 1 (hợp pháp hóa lãnh sự) (Judicial record No. 1 - consular legalization)',
+          'Bằng Đại học và xác nhận kinh nghiệm làm việc liên quan đến công việc cho chuyên gia (hợp pháp hóa lãnh sự 2 đầu) (University degree and confirmation of work experience relevant to the specialist\'s job - consular legalization at both ends)',
+          'Hồ sơ công ty kí đóng dấu - Bên em soạn (Company profile signed and stamped - Prepared by Visa5S)'
+        ],
+        specialRequirements: [
+          'Chức danh Chuyên gia: Bằng Đại Học + > 4 năm kinh nghiệm ở cùng lĩnh vực và chức danh cần xin (Expert title: University degree + > 4 years of experience in the same field and position as applied for).',
+          'Chức danh Phó Giám Đốc: Không cần bằng cấp kinh nghiệm nhưng vị trí đó phải trống trên Giấy phép kinh doanh (Position: Deputy Director – no qualifications or experience required but the position must be vacant on the Business License).'
+        ],
+        processingTimeNote: 'Thời gian xử lý: Khoảng 15 - 20 ngày làm việc (bao gồm bước giải trình nhu cầu sử dụng lao động nước ngoài và nộp hồ sơ xin cấp phép).'
+      }
+    ],
+    processingTime: '15 - 20 ngày làm việc (bao gồm giải trình nhu cầu)',
     validity: 'Tối đa 02 năm (được gia hạn 01 lần tối đa 02 năm)'
   }
 };
@@ -123,27 +193,27 @@ export const FAQ_LIST: FaqItem[] = [
   },
   {
     id: 'faq-2',
-    question: 'Thẻ tạm trú có thời hạn bao lâu?',
-    answer: 'Thời hạn thẻ tạm trú phụ thuộc vào loại ký hiệu (Lao động LĐ, Đầu tư ĐT, Thăm thân TT,...), thông thường từ 1 đến 5 năm. Lưu ý thời hạn thẻ tạm trú cấp ra sẽ ngắn hơn thời hạn còn lại của hộ chiếu ít nhất 30 ngày.',
+    question: 'Thẻ tạm trú có thời hạn bao lâu và thời gian làm mất bao lâu?',
+    answer: 'Thời hạn thẻ tạm trú thông thường từ 1 đến 5 năm (ngắn hơn hạn hộ chiếu ít nhất 30 ngày). Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến khoảng 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tùy hồ sơ thực tế.',
     category: 'Thẻ tạm trú'
   },
   {
     id: 'faq-3',
-    question: 'Người nước ngoài cần chuẩn bị những giấy tờ gì?',
-    answer: 'Tùy loại thủ tục cụ thể, thông thường hồ sơ căn bản gồm: Hộ chiếu còn hạn, ảnh thẻ chuẩn quốc tế, bằng đại học/chứng nhận chuyên gia đã hợp pháp hóa lãnh sự, phiếu lý lịch tư pháp, giấy khám sức khỏe và bộ hồ sơ pháp nhân của công ty bảo lãnh tại Việt Nam.',
-    category: 'Hồ sơ pháp lý'
+    question: 'Làm thẻ tạm trú cần tài khoản VNeID mức mấy?',
+    answer: 'Theo quy định hiện hành, xin cấp thẻ tạm trú diện lao động cần tài khoản định danh mức 2 VNeID của công ty cùng Token chữ ký số. Đối với diện thăm thân kết hôn, cần định danh mức 2 VNeID của người bảo lãnh Việt Nam.',
+    category: 'Thẻ tạm trú'
   },
   {
     id: 'faq-4',
-    question: 'Visa5S có hỗ trợ doanh nghiệp hồ sơ số lượng lớn không?',
-    answer: 'Có, Visa5S cung cấp các gói dịch vụ quản trị hồ sơ lưu trú toàn diện theo hợp đồng khung dành riêng cho các tập đoàn đa quốc gia và doanh nghiệp FDI tuyển dụng nhiều nhân sự, chuyên gia quốc tế cùng lúc.',
-    category: 'Doanh nghiệp FDI'
+    question: 'Điều kiện xin Giấy phép lao động vị trí Chuyên gia và Phó Giám Đốc khác nhau thế nào?',
+    answer: 'Với chức danh Chuyên gia, người lao động cần có Bằng Đại Học và trên 4 năm kinh nghiệm (> 4 năm) ở cùng lĩnh vực và chức danh cần xin (đã hợp pháp hóa lãnh sự 2 đầu). Đối với chức danh Phó Giám Đốc, không cần bằng cấp hay kinh nghiệm nhưng vị trí đó bắt buộc phải còn trống trên Giấy phép kinh doanh.',
+    category: 'Giấy phép lao động'
   },
   {
     id: 'faq-5',
-    question: 'Thời gian xử lý hồ sơ mất bao lâu?',
-    answer: 'Thời gian phụ thuộc vào từng loại hình dịch vụ và thời gian thẩm duyệt của cơ quan nhà nước có thẩm quyền (Sở LĐ-TB&XH, Cục Quản lý Xuất nhập cảnh). Chuyên viên Visa5S sẽ lên phương án chi tiết và cập nhật tiến độ theo từng mốc thời gian thực tế.',
-    category: 'Quy trình'
+    question: 'Visa5S có hỗ trợ doanh nghiệp trọn gói hồ sơ số lượng lớn không?',
+    answer: 'Có, Visa5S cung cấp các gói dịch vụ quản trị hồ sơ lưu trú toàn diện theo hợp đồng khung dành riêng cho các tập đoàn đa quốc gia và doanh nghiệp FDI tuyển dụng nhiều nhân sự, chuyên gia quốc tế cùng lúc.',
+    category: 'Doanh nghiệp FDI'
   },
   {
     id: 'faq-6',

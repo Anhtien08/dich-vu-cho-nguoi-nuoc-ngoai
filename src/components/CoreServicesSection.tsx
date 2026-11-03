@@ -90,28 +90,37 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
           </div>
 
           <div className="p-4 sm:p-5 flex flex-col gap-3">
-            <h3 className="text-lg sm:text-xl font-bold text-[#0048af]">
-              THẺ TẠM TRÚ (TRC)
-            </h3>
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#0048af]">
+                THẺ TẠM TRÚ (TRC)
+              </h3>
+              <span className="text-[11px] font-bold bg-[#ceddff] text-[#0048af] px-2.5 py-0.5 rounded-full">
+                Xử lý 8 - 12 ngày làm việc
+              </span>
+            </div>
 
             <ul className="flex flex-col gap-2 text-sm text-[#191c1e]">
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Cấp mới thẻ tạm trú cho nhà đầu tư, chuyên gia, lao động nước ngoài.</span>
+                <span>
+                  <strong>Diện Lao động:</strong> Hộ chiếu, GPLĐ sao y, GPKD 2 bản, ảnh 2x3, VNeID mức 2 công ty + Token.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Gia hạn và cấp lại thẻ tạm trú do hết hạn hoặc thất lạc.</span>
+                <span>
+                  <strong>Diện Thăm thân (Kết hôn):</strong> Giấy kết hôn HPHLS, CT07 gốc, tờ khai tạm trú, VNeID mức 2 người bảo lãnh.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Tư vấn điều kiện pháp lý, rà soát tính hợp lệ hồ sơ bảo lãnh.</span>
+                <span>Hồ sơ công ty hoặc thăm thân được chuyên viên Visa5S soạn thảo chuẩn chỉnh từ A - Z.</span>
               </li>
             </ul>
 
@@ -120,7 +129,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                 onClick={() => onOpenServiceModal('trc')}
                 className="flex-1 inline-flex items-center justify-between p-3 bg-[#f2f4f6] hover:bg-[#ceddff]/60 text-[#0048af] rounded-xl font-bold text-xs sm:text-sm active:bg-[#ceddff] transition-colors cursor-pointer"
               >
-                <span>TÌM HIỂU THÊM VỀ THẺ TẠM TRÚ</span>
+                <span>XEM CHI TIẾT HỒ SƠ THẺ TẠM TRÚ</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </button>
             </div>
@@ -141,28 +150,37 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
           </div>
 
           <div className="p-4 sm:p-5 flex flex-col gap-3">
-            <h3 className="text-lg sm:text-xl font-bold text-[#0048af]">
-              GIẤY PHÉP LAO ĐỘNG (WORK PERMIT)
-            </h3>
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#0048af]">
+                GIẤY PHÉP LAO ĐỘNG (WORK PERMIT)
+              </h3>
+              <span className="text-[11px] font-bold bg-[#89f5e7]/40 text-[#005952] px-2.5 py-0.5 rounded-full">
+                Tiêu chuẩn theo chức danh
+              </span>
+            </div>
 
             <ul className="flex flex-col gap-2 text-sm text-[#191c1e]">
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Cấp mới giấy phép lao động cho chuyên gia, lao động kỹ thuật cao.</span>
+                <span>
+                  <strong>Chức danh Chuyên gia:</strong> Bằng Đại Học + &gt; 4 năm kinh nghiệm ở cùng lĩnh vực và chức danh xin cấp.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Gia hạn, cấp đổi và cấp lại giấy phép lao động hết hạn.</span>
+                <span>
+                  <strong>Chức danh Phó Giám Đốc:</strong> Không cần bằng cấp kinh nghiệm, chỉ cần vị trí đó đang trống trên GPKD.
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-[#0048af] text-[20px] shrink-0 mt-0.5">
                   check_circle
                 </span>
-                <span>Tư vấn thủ tục xác nhận trường hợp miễn giấy phép lao động.</span>
+                <span>Hỗ trợ trọn gói: LLTP số 1, khám sức khỏe, hợp pháp hóa lãnh sự 2 đầu văn bằng và soạn hồ sơ cty ký đóng dấu.</span>
               </li>
             </ul>
 
@@ -171,7 +189,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                 onClick={() => onOpenServiceModal('work-permit')}
                 className="flex-1 inline-flex items-center justify-between p-3 bg-[#f2f4f6] hover:bg-[#ceddff]/60 text-[#0048af] rounded-xl font-bold text-xs sm:text-sm active:bg-[#ceddff] transition-colors cursor-pointer"
               >
-                <span>TÌM HIỂU THÊM VỀ GIẤY PHÉP LAO ĐỘNG</span>
+                <span>XEM CHI TIẾT HỒ SƠ GIẤY PHÉP LAO ĐỘNG</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </button>
             </div>

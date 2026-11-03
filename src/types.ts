@@ -1,5 +1,14 @@
 export type ServiceType = 'fast-track' | 'trc' | 'work-permit' | 'all';
 
+export interface DocumentGroup {
+  categoryTitle: string;
+  badge?: string;
+  docs: string[];
+  photoInfo?: string[];
+  specialRequirements?: string[];
+  processingTimeNote?: string;
+}
+
 export interface ServiceDetail {
   id: ServiceType;
   title: string;
@@ -11,8 +20,10 @@ export interface ServiceDetail {
   keyBenefits: string[];
   eligibility: string[];
   requiredDocs: string[];
+  docGroups?: DocumentGroup[];
   processingTime: string;
   validity: string;
+  specialNotice?: string;
 }
 
 export interface FaqItem {
