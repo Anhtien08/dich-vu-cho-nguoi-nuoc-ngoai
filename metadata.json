@@ -1,0 +1,6 @@
+{
+  "name": "Visa5S - Dịch vụ Hỗ trợ Người Nước Ngoài tại Việt Nam",
+  "description": "Dịch vụ Fast Track đón tiễn sân bay, làm Thẻ tạm trú (TRC) và Giấy phép lao động (Work Permit) uy tín, chuyên nghiệp cho người nước ngoài tại Việt Nam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
