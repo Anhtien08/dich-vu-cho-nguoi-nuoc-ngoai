@@ -9,11 +9,12 @@ import {
   HOTLINE_SECONDARY,
 } from '../data/visaData';
 import { OfficeLocation } from '../types';
+import { trackPhoneCall } from '../utils/tracking';
 
 interface FooterSectionProps {
   offices: OfficeLocation[];
   onScrollToForm: () => void;
-  onOpenServiceModal: (service: 'fast-track' | 'trc' | 'work-permit') => void;
+  onOpenServiceModal: (service: any) => void;
   onOpenEditAddress: () => void;
 }
 
@@ -133,6 +134,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
                 <strong className="font-bold text-[#0d335d]">Hotline:</strong>{' '}
                 <a
                   href={`tel:${HOTLINE_PRIMARY}`}
+                  onClick={() => trackPhoneCall({ phoneNumber: HOTLINE_PRIMARY, location: 'Footer Address Card Hotline' })}
                   className="text-[#0048af] font-bold hover:underline"
                 >
                   {HOTLINE_DISPLAY}
@@ -165,31 +167,34 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           </span>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs sm:text-sm text-gray-300">
             <button
-              onClick={() => onOpenServiceModal('fast-track')}
+              onClick={() => onOpenServiceModal('fast-track-arrival')}
               className="hover:text-[#89f5e7] transition-colors cursor-pointer text-left"
             >
-              Fast Track Sân Bay
+              Fast Track Nhập Cảnh
             </button>
             <button
-              onClick={() => onOpenServiceModal('trc')}
+              onClick={() => onOpenServiceModal('fast-track-vip')}
               className="hover:text-[#89f5e7] transition-colors cursor-pointer text-left"
             >
-              Thẻ Tạm Trú (TRC)
+              VIP Fast Track Trọn Gói
             </button>
             <button
-              onClick={() => onOpenServiceModal('work-permit')}
+              onClick={() => onOpenServiceModal('fast-track-departure')}
               className="hover:text-[#89f5e7] transition-colors cursor-pointer text-left"
             >
-              Giấy Phép Lao Động
+              Fast Track Xuất Cảnh
             </button>
+            <a href="#fast-track-detail" className="hover:text-[#89f5e7] transition-colors">
+              Điểm Đón 4 Sân Bay (SGN/HAN/DAD/CXR)
+            </a>
             <a href="#faq-accordion-group" className="hover:text-[#89f5e7] transition-colors">
               Câu Hỏi Thường Gặp
             </a>
             <button
               onClick={onScrollToForm}
-              className="hover:text-[#89f5e7] transition-colors cursor-pointer text-left"
+              className="hover:text-[#89f5e7] transition-colors cursor-pointer text-left font-semibold text-white"
             >
-              Gửi yêu cầu báo giá
+              Đặt Dịch Vụ Fast Track
             </button>
           </div>
         </div>

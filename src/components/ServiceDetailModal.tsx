@@ -3,7 +3,7 @@ import { SERVICES_DATA } from '../data/visaData';
 import { ServiceType } from '../types';
 
 interface ServiceDetailModalProps {
-  serviceId: 'fast-track' | 'trc' | 'work-permit' | null;
+  serviceId: string | null;
   onClose: () => void;
   onSelectServiceAndForm: (service: ServiceType) => void;
 }

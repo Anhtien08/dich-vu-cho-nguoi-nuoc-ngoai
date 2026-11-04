@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LOGO_URL, HOTLINE_PRIMARY } from '../data/visaData';
 import { OfficeLocation } from '../types';
+import { trackPhoneCall, trackZaloClick } from '../utils/tracking';
 
 interface HeaderProps {
   offices: OfficeLocation[];
@@ -81,6 +82,7 @@ export const Header: React.FC<HeaderProps> = ({
                           {loc.hotline && (
                             <a
                               href={`tel:${loc.hotline}`}
+                              onClick={() => trackPhoneCall({ phoneNumber: loc.hotline, location: `Header Dropdown - ${loc.city}` })}
                               className="text-[#0048af] font-extrabold text-xs hover:underline flex items-center gap-1"
                             >
                               <span className="material-symbols-outlined text-[14px]">call</span>
@@ -98,6 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
                       href={`https://zalo.me/${HOTLINE_PRIMARY}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackZaloClick({ location: 'Header Dropdown' })}
                       className="flex items-center justify-between p-2.5 rounded-xl bg-[#89f5e7]/20 hover:bg-[#89f5e7]/40 text-[#005952] transition-colors"
                     >
                       <div>

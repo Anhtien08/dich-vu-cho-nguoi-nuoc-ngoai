@@ -1,5 +1,6 @@
 import React from 'react';
 import { HOTLINE_PRIMARY } from '../data/visaData';
+import { trackPhoneCall, trackZaloClick } from '../utils/tracking';
 
 interface BottomNavProps {
   onScrollToForm: () => void;
@@ -13,6 +14,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ onScrollToForm }) => {
         <a
           href={`tel:${HOTLINE_PRIMARY}`}
           data-path="hotline-call"
+          onClick={() => trackPhoneCall({ phoneNumber: HOTLINE_PRIMARY, location: 'Sticky Bottom Nav Hotline Button' })}
           className="flex items-center gap-2 text-[#424654] hover:text-[#0048af] transition-colors min-h-[44px] px-1 py-1"
         >
           <div className="w-11 h-11 rounded-full bg-[#ceddff] text-[#0048af] flex items-center justify-center shrink-0 shadow-sm">
@@ -34,6 +36,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ onScrollToForm }) => {
           target="_blank"
           rel="noopener noreferrer"
           data-path="zalo-chat"
+          onClick={() => trackZaloClick({ location: 'Sticky Bottom Nav Zalo Button' })}
           className="flex flex-col items-center justify-center min-w-[50px] min-h-[44px] text-[#424654] hover:text-[#005952] transition-colors group"
         >
           <div className="w-10 h-10 rounded-full bg-[#89f5e7]/40 text-[#005952] flex items-center justify-center group-hover:scale-105 transition-transform">

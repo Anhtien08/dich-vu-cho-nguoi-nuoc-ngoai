@@ -1,4 +1,11 @@
-export type ServiceType = 'fast-track' | 'trc' | 'work-permit' | 'all';
+export type ServiceType =
+  | 'fast-track'
+  | 'fast-track-arrival'
+  | 'fast-track-departure'
+  | 'fast-track-vip'
+  | 'trc'
+  | 'work-permit'
+  | 'all';
 
 export interface DocumentGroup {
   categoryTitle: string;

@@ -6,10 +6,6 @@ export const HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC
 
 export const FAST_TRACK_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuBKpx_FXwpR5k02O-HgVkd_iZQ3z2Fio7D6NnoKFXuCEJLPRKodoHidWVobONs3A7awaqQ3D7SHMvpBUzkjVKstPvFhccrbbjXucc95ngIH_9WQ_ezJat5DcKw0jWOMwQgYZsZC4fg6yhAhnIAKBcXgQGXT401d5438KSTsF39Ig9R8oTh6hT3ZsRT0DbZ_yI6x9HlGtt35SJZDQ1DPyNevhv4sfiJOBkQ5DIRychYa';
 
-export const TRC_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDD9ZHqpRXr-Lfar0YpojkpjEU5suRRmC9xBEnSSERSPTw4Afapl2cobsGTMNLryeEqXXIPYlEiTjonoqLUXyNLmCt1i-vyfBkS5e52wxZV4t3NebsYMzrIZloKbbgYCQ_VSFiIR5IHpDB5HNWGwbw6EdHLrGy14i79_rI2qWdH2TzbT5KT_i3a195ijMBFeG7MaP-G5h6gmyHqrNUYJFGq7SXkk5bWoPgp-bA3NlSp';
-
-export const WORK_PERMIT_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJUvqLCylyr13TGQ57EOFj0IfC2QV8wuzs2Y_c0ouNhU-cP_9UdRq7L052SAQ1q8rIC7aq6Icb2o2x3R5MU8F5tcgGK9g_sMmgVAjRqKyISRPhS5XIVAqVBqbIU7tqUvEl08HOVsVnxkroVGvW83HbPxkbakPuuOBFuA6crCZzHN05erlKzreuzstpqkJhxuzRZ474ZDQvTfQL5XG1TxpxFnZZUaxXzmzvYkHj8ayn';
-
 export const COMPANY_NAME = 'VISA5S - CÔNG TY TƯ VẤN ĐẦU TƯ ASIA BLUE SKY';
 export const COMPANY_SLOGAN = 'Hãy Đến Nơi Nào Bạn Muốn';
 export const COMPANY_EMAIL = 'info@visa5s.com.vn';
@@ -21,20 +17,20 @@ export const HOTLINE_DISPLAY = '0911.909.686 - 0967.686.101';
 export const HOTLINE_HN = '0911 909 686';
 export const HOTLINE_HCM = '0967 686 101';
 
-export const SERVICES_DATA: Record<'fast-track' | 'trc' | 'work-permit', ServiceDetail> = {
+export const SERVICES_DATA: Record<string, ServiceDetail> = {
   'fast-track': {
     id: 'fast-track',
-    title: 'FAST TRACK SÂN BAY',
-    tagline: 'Hỗ trợ thủ tục nhập cảnh nhanh chóng, đón tiễn VIP tại cửa máy bay',
+    title: 'FAST TRACK SÂN BAY (TIÊU CHUẨN)',
+    tagline: 'Hỗ trợ thủ tục nhập cảnh nhanh chóng, đón tiễn chuyên nghiệp tại cửa máy bay',
     badge: 'Ưu tiên sân bay',
     badgeColor: 'bg-[#0b1b34] text-white',
     heroImage: FAST_TRACK_IMAGE,
     summary: 'Dịch vụ đón tiếp chuyên biệt tại 4 sân bay quốc tế lớn của Việt Nam (Tân Sơn Nhất, Nội Bài, Đà Nẵng, Cam Ranh). Chuyên viên đón khách ngay từ cửa máy bay/ống lồng, hướng dẫn làn ưu tiên qua quầy kiểm soát công an xuất nhập cảnh, rút ngắn tối đa thời gian chờ đợi.',
     keyBenefits: [
       'Đón ngay tại cửa ra máy bay (cửa ống lồng) với bảng đón tên trang trọng.',
-      'Dẫn lối làn ưu tiên riêng biệt (Priority Lane) để làm thủ tục nhập cảnh.',
+      'Dẫn lối làn ưu tiên riêng biệt (Priority Lane) để làm thủ tục nhập cảnh nhanh gọn.',
       'Hỗ trợ toàn bộ khâu dán tem thị thực (Visa On Arrival) và đóng dấu xuất nhập cảnh.',
-      'Hỗ trợ nhận hành lý ký gửi tại băng chuyền và đưa ra tận sảnh xe chờ đón.',
+      'Tiết kiệm từ 45 - 90 phút xếp hàng tại khu vực hải quan cửa khẩu.',
       'Điều phối linh hoạt theo thời gian thực tế hạ cánh của chuyến bay.'
     ],
     eligibility: [
@@ -47,179 +43,147 @@ export const SERVICES_DATA: Record<'fast-track' | 'trc' | 'work-permit', Service
       'Thông tin vé máy bay (Số hiệu chuyến bay, ngày & giờ hạ cánh dự kiến).',
       'Công văn nhập cảnh (Approval Letter) hoặc E-visa đã được cấp (nếu có).'
     ],
+    docGroups: [
+      {
+        categoryTitle: 'Thông tin chuyến bay & Hành khách cần cung cấp',
+        badge: 'Thông tin đặt dịch vụ',
+        docs: [
+          'Hình ảnh trang thông tin hộ chiếu của từng hành khách (rõ nét)',
+          'Mã số hiệu chuyến bay (Flight Number, ví dụ: VN602, KE683, SQ178...)',
+          'Ngày & giờ hạ cánh dự kiến tại sân bay Việt Nam',
+          'Tên hiển thị trên bảng đón tại cửa máy bay (Ví dụ: MR. JOHN DOE)',
+          'Hình ảnh E-visa hoặc Công văn nhập cảnh (đối với khách cần dán tem visa)'
+        ],
+        photoInfo: [
+          'Ảnh chụp mặt hộ chiếu còn hạn ít nhất 6 tháng gửi qua Zalo',
+          'Ảnh vé máy bay điện tử hoặc thẻ lên máy bay (Boarding Pass)'
+        ],
+        specialRequirements: [
+          'Khuyến nghị đặt dịch vụ trước 12 - 24 giờ trước giờ máy bay hạ cánh.',
+          'Chuyên viên Visa5S theo dõi radar chuyến bay trực tiếp, tự động cập nhật giờ đón nếu chuyến bay bị delay mà không tính thêm phụ phí.'
+        ],
+        processingTimeNote: 'Xác nhận dịch vụ trong 15 - 30 phút sau khi nhận đầy đủ thông tin chuyến bay.'
+      }
+    ],
     processingTime: 'Đặt trước tối thiểu 12 - 24 giờ trước giờ hạ cánh',
     validity: 'Áp dụng cho từng chuyến bay hạ cánh hoặc cất cánh'
   },
-  'trc': {
-    id: 'trc',
-    title: 'THẺ TẠM TRÚ (TRC)',
-    tagline: 'Hồ sơ thủ tục thẻ tạm trú diện Lao động & Thăm thân chuẩn quy định xuất nhập cảnh',
-    badge: 'Lưu trú 1 - 5 Năm',
+  'fast-track-arrival': {
+    id: 'fast-track-arrival',
+    title: 'FAST TRACK NHẬP CẢNH (ARRIVAL FAST TRACK)',
+    tagline: 'Đón tại cửa ống lồng máy bay, ưu tiên qua quầy xuất nhập cảnh và dán tem visa',
+    badge: 'Đón tại cửa máy bay',
     badgeColor: 'bg-[#0048af] text-white',
-    heroImage: TRC_IMAGE,
-    summary: 'Thẻ tạm trú (Temporary Residence Card - TRC) do Cục Quản lý xuất nhập cảnh cấp cho người nước ngoài cư trú dài hạn tại Việt Nam thay thị thực. Visa5S hỗ trợ trọn gói chuẩn bị hồ sơ cho cả diện Lao động và diện Thăm thân, hướng dẫn nộp hồ sơ qua hệ thống định danh VNeID mức 2.',
+    heroImage: FAST_TRACK_IMAGE,
+    summary: 'Dành riêng cho khách quốc tế hạ cánh tại Việt Nam. Chuyên viên đón ngay tại cửa ra máy bay (cửa ống lồng), cầm bảng tên nhận diện, hỗ trợ khách dán tem thị thực (nếu cần) và dẫn lối qua cổng xuất nhập cảnh ưu tiên không phải xếp hàng.',
     keyBenefits: [
-      'Lưu trú dài hạn từ 1 đến 5 năm tại Việt Nam hoàn toàn miễn thị thực xuất nhập cảnh.',
-      'Được bảo lãnh người thân (vợ/chồng, con cái) cùng sang Việt Nam sinh sống.',
-      'Thuận tiện mở tài khoản ngân hàng, mua căn hộ, chuyển đổi bằng lái xe.',
-      'Hồ sơ công ty hoặc hồ sơ thăm thân được chuyên viên Visa5S soạn thảo chuẩn chỉnh.',
-      'Đồng hành hỗ trợ nộp hồ sơ cùng nhân sự/người bảo lãnh và nhận kết quả tận tay.'
+      'Đón trực tiếp ngay cửa ra máy bay (Gate/Ống lồng).',
+      'Hỗ trợ toàn bộ thủ tục dán tem visa (Visa On Arrival) nhanh chóng.',
+      'Đi qua làn ưu tiên riêng biệt của công an cửa khẩu.',
+      'Hướng dẫn khách tới khu vực lấy hành lý và sảnh đón xe ngoài nhà ga.'
     ],
     eligibility: [
-      'Người lao động nước ngoài có Giấy phép lao động hoặc Giấy miễn GPLĐ (diện Lao động LĐ1, LĐ2).',
-      'Người nước ngoài kết hôn với công dân Việt Nam hoặc là con của công dân Việt Nam (diện Thăm thân TT).',
-      'Nhà đầu tư nước ngoài góp vốn vào doanh nghiệp tại Việt Nam (ký hiệu ĐT1, ĐT2, ĐT3).'
+      'Khách quốc tế, chuyên gia, nhà đầu tư nhập cảnh vào Việt Nam.',
+      'Gia đình có trẻ em, người lớn tuổi cần di chuyển nhanh chóng, thoải mái.'
     ],
     requiredDocs: [
-      'Hộ chiếu gốc còn hạn dài hơn thời hạn thẻ dự kiến ít nhất 30 ngày.',
-      '2 Ảnh thẻ 2x3 mới nhất + file ảnh (nền trắng).',
-      'Visa / Thẻ tạm trú (TRC) bản gốc đang sử dụng.',
-      'Giấy phép kinh doanh và Giấy phép lao động (sao y công chứng 2 bản - đối với diện lao động).',
-      'Giấy kết hôn sao y công chứng và hợp pháp hóa lãnh sự (đối với diện thăm thân).',
-      'Tờ khai tạm trú / Xác nhận cư trú CT07 của người bảo lãnh.',
-      'CCCD của nhân sự hoặc người bảo lãnh Việt Nam.',
-      'Bộ hồ sơ công ty ký đóng dấu (do chuyên viên Visa5S soạn).'
+      'Mặt hộ chiếu, Mã chuyến bay, Giờ hạ cánh, Bảng tên đón.'
     ],
-    docGroups: [
-      {
-        categoryTitle: 'Thủ tục xin cấp thẻ tạm trú diện Lao động',
-        badge: 'Diện Lao Động',
-        docs: [
-          'Hộ chiếu gốc',
-          '2 Ảnh thẻ 2x3 mới nhất + file ảnh',
-          'Visa / TRC gốc',
-          'Giấy phép kinh doanh công ty Việt Nam (sao y công chứng 2 bản)',
-          'Giấy phép lao động (sao y công chứng 2 bản)',
-          'Giấy xác nhận tạm trú online nếu cùng tỉnh',
-          'SĐT, Email của nhân sự (có đóng BHXH để nộp hồ sơ cùng bên em và nhận kết quả)',
-          'CCCD 2 mặt + sao y công chứng 2 mặt trên 1 mặt tờ A4',
-          'Hồ sơ công ty ký đóng dấu (Bên em soạn)'
-        ],
-        specialRequirements: [
-          'Cần định danh mức 2 VNeID của công ty và Token (chữ ký số điện tử).'
-        ],
-        processingTimeNote: 'Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tuỳ hồ sơ.'
-      },
-      {
-        categoryTitle: 'Thủ tục xin cấp thẻ tạm trú diện Thăm thân (Family visit)',
-        badge: 'Diện Thăm Thân',
-        docs: [
-          'Hộ chiếu gốc',
-          'Ảnh thẻ 2x3 nền trắng + file ảnh gửi qua Zalo',
-          'Visa / Thẻ tạm trú - Bản gốc',
-          'Giấy kết hôn (sao y công chứng và hợp pháp hóa lãnh sự nếu được cấp ngoài Việt Nam)',
-          'CT07 xác nhận cư trú của người bảo lãnh - Bản gốc',
-          'Tờ khai tạm trú - Bản gốc có xác nhận dấu đỏ nếu ở khác tỉnh (nếu cùng tỉnh với vợ thì tờ khai tạm trú online là được)'
-        ],
-        photoInfo: [
-          'Mặt hộ chiếu của người nước ngoài (NNN), visa/thẻ tạm trú đang dùng, dấu nhập cảnh gần nhất',
-          '2 mặt CCCD của người Việt Nam',
-          'Địa chỉ thường trú (theo hộ khẩu) của người Việt Nam (sau sáp nhập)'
-        ],
-        specialRequirements: [
-          'Cần định danh mức 2 VNeID của người bảo lãnh.',
-          'Tùy từng trường hợp thực tế sẽ có các thủ tục hồ sơ điều chỉnh tương ứng.'
-        ],
-        processingTimeNote: 'Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tuỳ hồ sơ.'
-      }
-    ],
-    processingTime: '8 - 12 ngày làm việc (không tính thứ 7, chủ nhật)',
-    validity: 'Từ 01 năm đến tối đa 05 năm (theo quy định pháp luật)'
+    processingTime: 'Xác nhận dịch vụ trong 15 phút',
+    validity: 'Áp dụng cho chuyến bay đến (Arrival)'
   },
-  'work-permit': {
-    id: 'work-permit',
-    title: 'GIẤY PHÉP LAO ĐỘNG (WORK PERMIT)',
-    tagline: 'Thông tin hồ sơ cần chuẩn bị cấp Giấy phép lao động theo tiêu chuẩn từng chức danh',
-    badge: 'Hợp chuẩn lao động',
+  'fast-track-departure': {
+    id: 'fast-track-departure',
+    title: 'FAST TRACK XUẤT CẢNH (DEPARTURE FAST TRACK)',
+    tagline: 'Hỗ trợ check-in nhanh, dẫn lối qua an ninh soi chiếu và quầy xuất cảnh ưu tiên',
+    badge: 'Xuất cảnh ưu tiên',
     badgeColor: 'bg-[#005952] text-white',
-    heroImage: WORK_PERMIT_IMAGE,
-    summary: 'Giấy phép lao động là văn bản pháp lý bắt buộc cho người lao động nước ngoài làm việc hợp pháp tại Việt Nam. Visa5S hỗ trợ trọn gói từ soạn thảo hồ sơ, hướng dẫn khám sức khỏe, làm lý lịch tư pháp số 1 đến hợp pháp hóa lãnh sự 2 đầu văn bằng và chứng nhận kinh nghiệm.',
+    heroImage: HERO_IMAGE,
+    summary: 'Dịch vụ hỗ trợ hành khách xuất cảnh rời Việt Nam. Chuyên viên đón tại sảnh ga đi quốc tế, hỗ trợ làm thủ tục check-in vé máy bay, cân hành lý, dẫn lối ưu tiên qua khu vực an ninh soi chiếu và kiểm soát xuất cảnh nhanh gọn.',
     keyBenefits: [
-      'Doanh nghiệp và người lao động tuân thủ 100% quy định pháp luật lao động hiện hành.',
-      'Là căn cứ pháp lý quan trọng nhất để làm thủ tục xin cấp Thẻ tạm trú 2 năm.',
-      'Visa5S trực tiếp soạn thảo toàn bộ hồ sơ công ty ký đóng dấu.',
-      'Hỗ trợ hợp pháp hóa lãnh sự 2 đầu bằng đại học và xác nhận kinh nghiệm làm việc.',
-      'Đại diện doanh nghiệp nộp và theo dõi lộ trình xét duyệt tại cơ quan chức năng.'
+      'Đón tại cột mốc quy định ở sảnh nhà ga đi quốc tế.',
+      'Hỗ trợ làm thủ tục check-in vé máy bay tại quầy hãng bay.',
+      'Dẫn lối ưu tiên qua khu vực soi chiếu an ninh hàng không.',
+      'Đi qua làn xuất cảnh ưu tiên để vào khu vực phòng chờ cách ly.'
     ],
     eligibility: [
-      'Chức danh Chuyên gia: Bằng Đại Học + trên 4 năm kinh nghiệm (> 4 năm) ở cùng lĩnh vực và chức danh cần xin.',
-      'Chức danh Phó Giám Đốc: Không cần bằng cấp, kinh nghiệm nhưng vị trí đó phải trống trên Giấy phép kinh doanh.',
-      'Chức danh Lao động kỹ thuật: Được đào tạo chuyên ngành ít nhất 1 năm và có tối thiểu 3 năm kinh nghiệm phù hợp.'
+      'Hành khách xuất cảnh cần tiết kiệm thời gian, doanh nhân bận rộn.',
+      'Đoàn công tác, đoàn khách du lịch cần thủ tục xuất cảnh nhanh gọn.'
     ],
     requiredDocs: [
-      'Hộ Chiếu (Passport).',
-      'Visa / Thẻ tạm trú (Visa / Temporary Residence Card).',
-      'Giấy phép kinh doanh sao y công chứng (Notarized copy business license).',
-      'Giấy phép lao động cũ nếu có (Old work permit if applicable).',
-      '2 Ảnh thẻ 4*6 + file (2 4*6 card photos + file).',
-      'Giấy khám sức khỏe (Health certificate).',
-      'Lý lịch tư pháp số 1 (hợp pháp hóa lãnh sự) (Judicial record No. 1 - consular legalization).',
-      'Bằng Đại học và xác nhận kinh nghiệm làm việc liên quan đến công việc cho chuyên gia (hợp pháp hóa lãnh sự 2 đầu).',
-      'Hồ sơ công ty kí đóng dấu (Bên em soạn - Prepared by Visa5S).'
+      'Mặt hộ chiếu, Thông tin vé máy bay xuất cảnh, Giờ bay dự kiến.'
     ],
-    docGroups: [
-      {
-        categoryTitle: 'Hồ sơ Giấy Phép lao động cần chuẩn bị (Work Permit Application)',
-        badge: 'Danh mục hồ sơ',
-        docs: [
-          'Hộ Chiếu (Passport)',
-          'Visa / Thẻ tạm trú (Visa / Temporary Residence Card)',
-          'Giấy phép kinh doanh sao y công chứng (Notarized copy business license)',
-          'Giấy phép lao động cũ nếu có (Old work permit if applicable)',
-          '2 Ảnh thẻ 4*6 + file (2 4*6 card photos + file)',
-          'Giấy khám sức khỏe (Health certificate)',
-          'Lý lịch tư pháp số 1 (hợp pháp hóa lãnh sự) (Judicial record No. 1 - consular legalization)',
-          'Bằng Đại học và xác nhận kinh nghiệm làm việc liên quan đến công việc cho chuyên gia (hợp pháp hóa lãnh sự 2 đầu) (University degree and confirmation of work experience relevant to the specialist\'s job - consular legalization at both ends)',
-          'Hồ sơ công ty kí đóng dấu - Bên em soạn (Company profile signed and stamped - Prepared by Visa5S)'
-        ],
-        specialRequirements: [
-          'Chức danh Chuyên gia: Bằng Đại Học + > 4 năm kinh nghiệm ở cùng lĩnh vực và chức danh cần xin (Expert title: University degree + > 4 years of experience in the same field and position as applied for).',
-          'Chức danh Phó Giám Đốc: Không cần bằng cấp kinh nghiệm nhưng vị trí đó phải trống trên Giấy phép kinh doanh (Position: Deputy Director – no qualifications or experience required but the position must be vacant on the Business License).'
-        ],
-        processingTimeNote: 'Thời gian xử lý: Khoảng 15 - 20 ngày làm việc (bao gồm bước giải trình nhu cầu sử dụng lao động nước ngoài và nộp hồ sơ xin cấp phép).'
-      }
+    processingTime: 'Xác nhận dịch vụ trong 15 phút',
+    validity: 'Áp dụng cho chuyến bay đi (Departure)'
+  },
+  'fast-track-vip': {
+    id: 'fast-track-vip',
+    title: 'VIP FAST TRACK TRỌN GÓI',
+    tagline: 'Đón tại cửa máy bay + Lấy hành lý ký gửi + Xe riêng đưa đón ra sảnh nhà ga',
+    badge: 'Dịch vụ VIP cao cấp',
+    badgeColor: 'bg-[#0b1b34] text-white',
+    heroImage: FAST_TRACK_IMAGE,
+    summary: 'Gói dịch vụ cao cấp nhất của Visa5S: Chuyên viên đón tại cửa máy bay, làm thủ tục xuất nhập cảnh ưu tiên, có nhân sự hỗ trợ lấy toàn bộ hành lý ký gửi tại băng chuyền và đưa quý khách ra tận xe riêng đưa đón tại sảnh VIP.',
+    keyBenefits: [
+      'Đón tiễn VIP tại cửa máy bay với bảng tên trang trọng.',
+      'Làn ưu tiên xuất nhập cảnh VIP nhanh nhất.',
+      'Nhân viên hỗ trợ chờ và nhận toàn bộ hành lý ký gửi tại băng chuyền.',
+      'Hộ tống và đưa hành lý ra tận xe riêng hoặc kết nối tài xế đón sẵn.'
     ],
-    processingTime: '15 - 20 ngày làm việc (bao gồm giải trình nhu cầu)',
-    validity: 'Tối đa 02 năm (được gia hạn 01 lần tối đa 02 năm)'
+    eligibility: [
+      'Chuyên gia cấp cao, Tổng giám đốc, Nhà đầu tư nước ngoài, Phái đoàn VIP.',
+      'Hành khách mang nhiều hành lý ký gửi cần người hỗ trợ bốc xếp.'
+    ],
+    requiredDocs: [
+      'Hộ chiếu, Mã chuyến bay, Số lượng kiện hành lý ký gửi, Thông tin xe đưa đón (nếu có).'
+    ],
+    processingTime: 'Đặt trước tối thiểu 12 - 24 giờ',
+    validity: 'Áp dụng cho chuyến bay đến hoặc đi'
   }
 };
 
 export const FAQ_LIST: FaqItem[] = [
   {
     id: 'faq-1',
-    question: 'Giấy phép lao động có thời hạn bao lâu?',
-    answer: 'Thời hạn tối đa của Giấy phép lao động là 02 năm theo quy định của Bộ luật Lao động Việt Nam. Sau khi hết hạn, doanh nghiệp có thể thực hiện thủ tục gia hạn 01 lần với thời hạn tối đa tiếp theo là 02 năm nếu đáp ứng đầy đủ điều kiện pháp lý.',
-    category: 'Giấy phép lao động'
+    question: 'Dịch vụ Fast Track hỗ trợ tại những sân bay quốc tế nào?',
+    answer: 'Visa5S hiện cung cấp dịch vụ Fast Track đón tiễn ưu tiên tại 4 sân bay quốc tế lớn nhất Việt Nam: Sân bay quốc tế Tân Sơn Nhất (TP.HCM - SGN), Sân bay quốc tế Nội Bài (Hà Nội - HAN), Sân bay quốc tế Đà Nẵng (Đà Nẵng - DAD), và Sân bay quốc tế Cam Ranh (Khánh Hòa - CXR).',
+    category: 'Sân bay phục vụ'
   },
   {
     id: 'faq-2',
-    question: 'Thẻ tạm trú có thời hạn bao lâu và thời gian làm mất bao lâu?',
-    answer: 'Thời hạn thẻ tạm trú thông thường từ 1 đến 5 năm (ngắn hơn hạn hộ chiếu ít nhất 30 ngày). Thời gian xử lý từ ngày nộp hồ sơ gốc dự kiến khoảng 8 - 12 ngày làm việc (không tính thứ 7, chủ nhật), có thể có sớm hơn hoặc trễ hơn tùy hồ sơ thực tế.',
-    category: 'Thẻ tạm trú'
+    question: 'Cần đặt dịch vụ Fast Track trước bao lâu trước giờ hạ cánh?',
+    answer: 'Khuyến nghị quý khách đặt dịch vụ trước tối thiểu 12 đến 24 giờ trước giờ bay để Visa5S kịp thời xin cấp phép ra vào khu vực cách ly sân bay và điều phối chuyên viên túc trực tại cửa máy bay. Trong trường hợp khẩn cấp (dưới 6 tiếng), vui lòng gọi hotline 0911 909 686 để được xử lý ưu tiên.',
+    category: 'Thời gian đặt dịch vụ'
   },
   {
     id: 'faq-3',
-    question: 'Làm thẻ tạm trú cần tài khoản VNeID mức mấy?',
-    answer: 'Theo quy định hiện hành, xin cấp thẻ tạm trú diện lao động cần tài khoản định danh mức 2 VNeID của công ty cùng Token chữ ký số. Đối với diện thăm thân kết hôn, cần định danh mức 2 VNeID của người bảo lãnh Việt Nam.',
-    category: 'Thẻ tạm trú'
+    question: 'Khách hàng cần dán tem visa (Visa On Arrival) có được hỗ trợ không?',
+    answer: 'Có. Chuyên viên Visa5S sẽ đón khách tại cửa máy bay, nhận hộ chiếu cùng công văn nhập cảnh / E-visa, trực tiếp nộp vào quầy công an cửa khẩu để lấy tem visa nhanh chóng, sau đó dẫn khách qua làn ưu tiên nhập cảnh mà không phải xếp hàng chờ đợi.',
+    category: 'Thủ tục visa'
   },
   {
     id: 'faq-4',
-    question: 'Điều kiện xin Giấy phép lao động vị trí Chuyên gia và Phó Giám Đốc khác nhau thế nào?',
-    answer: 'Với chức danh Chuyên gia, người lao động cần có Bằng Đại Học và trên 4 năm kinh nghiệm (> 4 năm) ở cùng lĩnh vực và chức danh cần xin (đã hợp pháp hóa lãnh sự 2 đầu). Đối với chức danh Phó Giám Đốc, không cần bằng cấp hay kinh nghiệm nhưng vị trí đó bắt buộc phải còn trống trên Giấy phép kinh doanh.',
-    category: 'Giấy phép lao động'
+    question: 'Làm thế nào để nhận diện chuyên viên đón tại sân bay?',
+    answer: 'Chuyên viên Visa5S sẽ đứng ngay tại cửa ra máy bay (cửa ống lồng nối vào nhà ga), cầm bảng đón tên nhận diện in rõ Họ tên hành khách hoặc tên Công ty/Tổ chức theo yêu cầu của quý khách.',
+    category: 'Điểm đón sân bay'
   },
   {
     id: 'faq-5',
-    question: 'Visa5S có hỗ trợ doanh nghiệp trọn gói hồ sơ số lượng lớn không?',
-    answer: 'Có, Visa5S cung cấp các gói dịch vụ quản trị hồ sơ lưu trú toàn diện theo hợp đồng khung dành riêng cho các tập đoàn đa quốc gia và doanh nghiệp FDI tuyển dụng nhiều nhân sự, chuyên gia quốc tế cùng lúc.',
-    category: 'Doanh nghiệp FDI'
+    question: 'Dịch vụ Fast Track có hỗ trợ lấy hành lý và đưa ra xe không?',
+    answer: 'Có. Quý khách có thể lựa chọn gói Fast Track VIP. Sau khi làm xong thủ tục nhập cảnh, chuyên viên sẽ cùng quý khách đến khu vực băng chuyền, hỗ trợ nhận hành lý ký gửi và đưa hành lý ra tận sảnh xe chờ đón phía ngoài nhà ga.',
+    category: 'Hỗ trợ hành lý'
   },
   {
     id: 'faq-6',
-    question: 'Dịch vụ Fast Track đón tại những sân bay nào?',
-    answer: 'Visa5S hiện cung cấp dịch vụ Fast Track đón tiễn ưu tiên tại 4 sân bay quốc tế lớn nhất Việt Nam: Sân bay quốc tế Tân Sơn Nhất (TP.HCM - SGN), Sân bay quốc tế Nội Bài (Hà Nội - HAN), Sân bay quốc tế Đà Nẵng (Đà Nẵng - DAD), và Sân bay quốc tế Cam Ranh (Khánh Hòa - CXR).',
-    category: 'Fast Track Sân Bay'
+    question: 'Nếu chuyến bay bị trễ giờ (delay) thì dịch vụ có bị hủy không?',
+    answer: 'Không. Visa5S có bộ phận điều phối liên tục theo dõi tình trạng chuyến bay trên hệ thống radar hàng không quốc tế theo mã chuyến bay của quý khách. Chuyên viên sẽ linh hoạt điều chỉnh giờ đón chính xác theo thời gian máy bay thực tế hạ cánh mà không tính thêm bất kỳ khoản phụ phí nào.',
+    category: 'Thay đổi chuyến bay'
+  },
+  {
+    id: 'faq-7',
+    question: 'Dịch vụ Fast Track có phù hợp cho người lớn tuổi và trẻ nhỏ không?',
+    answer: 'Rất phù hợp. Chặng bay dài thường khiến người cao tuổi và trẻ nhỏ mệt mỏi. Với dịch vụ Fast Track, gia đình sẽ được ưu tiên đi qua làn thông thoáng riêng, không phải đứng xếp hàng chờ đợi hàng giờ tại quầy công an cửa khẩu.',
+    category: 'Đối tượng khách hàng'
   }
 ];
 

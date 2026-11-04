@@ -1,28 +1,28 @@
 import React from 'react';
 
-const TARGET_SEGMENTS = [
+const FAST_TRACK_CLIENTS = [
   {
-    title: 'Người nước ngoài làm việc tại Việt Nam',
-    desc: 'Chuyên gia, lao động kỹ thuật tay nghề cao, nhà đầu tư trực tiếp cần hoàn thiện tư cách pháp lý cư trú.',
-    icon: 'badge',
+    title: 'Doanh nhân & Chuyên gia cấp cao',
+    desc: 'Lịch trình công tác khẩn cấp, cần hoàn tất thủ tục nhập cảnh nhanh nhất để kịp các cuộc họp quan trọng mà không lãng phí thời gian chờ đợi.',
+    icon: 'business_center',
     iconBg: 'bg-[#ceddff] text-[#0048af]'
   },
   {
-    title: 'Doanh nghiệp tuyển dụng nhân sự quốc tế',
-    desc: 'Các tập đoàn đa quốc gia, công ty vốn FDI, doanh nghiệp trong nước cần bảo lãnh nhân sự nước ngoài.',
-    icon: 'business',
+    title: 'Gia đình có trẻ nhỏ & Người lớn tuổi',
+    desc: 'Chuyến bay dài dễ gây kiệt sức; làn ưu tiên riêng biệt giúp cả gia đình làm thủ tục nhẹ nhàng, thông thoáng, không mệt mỏi.',
+    icon: 'family_restroom',
     iconBg: 'bg-[#ceddff] text-[#0048af]'
   },
   {
-    title: 'Bộ phận Hành chính & Nhân sự (HR)',
-    desc: 'Giải phóng áp lực thủ tục giấy tờ, tối ưu thời gian chuẩn bị hồ sơ lao động nước ngoài theo luật định.',
-    icon: 'groups',
+    title: 'Khách du lịch cao cấp & Phái đoàn ngoại giao',
+    desc: 'Được đón tiếp chu đáo ngay tại cửa máy bay với bảng tên trang trọng, phong cách chuyên nghiệp, nâng tầm trải nghiệm từ giây phút đầu tiên.',
+    icon: 'star',
     iconBg: 'bg-[#89f5e7]/30 text-[#005952]'
   },
   {
-    title: 'Khách quốc tế có nhu cầu Fast Track',
-    desc: 'Doanh nhân bận rộn, gia đình có trẻ em, đoàn công tác hoặc phái đoàn cần đón tiếp chu đáo tại sân bay.',
-    icon: 'flight_takeoff',
+    title: 'Doanh nghiệp FDI & Cơ quan đón tiếp đối tác',
+    desc: 'Giải pháp đón rước chuyên nghiệp dành cho các công ty đón lãnh đạo tập đoàn, đối tác chiến lược hoặc khách mời quốc tế về Việt Nam.',
+    icon: 'corporate_fare',
     iconBg: 'bg-[#89f5e7]/30 text-[#005952]'
   }
 ];
@@ -35,15 +35,15 @@ export const TargetClientsSection: React.FC = () => {
           Phục vụ chuyên biệt
         </span>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-[#191c1e]">
-          ĐỐI TƯỢNG KHÁCH HÀNG
+          ĐỐI TƯỢNG PHÙ HỢP VỚI FAST TRACK
         </h2>
         <p className="text-sm text-[#424654]">
-          Được may đo giải pháp phù hợp với từng nhu cầu pháp lý và lịch trình.
+          Giải pháp ưu tiên tại sân bay phù hợp với từng nhu cầu di chuyển và lịch trình.
         </p>
       </div>
 
       <div className="flex flex-col gap-3">
-        {TARGET_SEGMENTS.map((segment) => (
+        {FAST_TRACK_CLIENTS.map((segment) => (
           <div
             key={segment.title}
             className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3.5 hover:border-[#1e60d5]/30 transition-all"

@@ -23,8 +23,8 @@ import { DEFAULT_OFFICES } from './data/visaData';
 const STORAGE_KEY = 'visa5s_offices_v4';
 
 export default function App() {
-  const [activeModalService, setActiveModalService] = useState<'fast-track' | 'trc' | 'work-permit' | null>(null);
-  const [selectedFormService, setSelectedFormService] = useState<ServiceType>('fast-track');
+  const [activeModalService, setActiveModalService] = useState<string | null>(null);
+  const [selectedFormService, setSelectedFormService] = useState<ServiceType>('fast-track-arrival');
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isEditAddressOpen, setIsEditAddressOpen] = useState(false);
 
